@@ -1,0 +1,154 @@
+{
+  "name": "dsh-douyin-browser-local",
+  "version": "1.5.0",
+  "type": "module",
+  "description": "DSH 原生抖音工具与独立 DeepSeek 本地助手（二次开发分支）",
+  "license": "MIT",
+  "author": "LockyBee",
+  "contributors": [
+    {
+      "name": "Summer77177"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Summer77177/dsh-douyin-agent.git"
+  },
+  "homepage": "https://github.com/Summer77177/dsh-douyin-agent#readme",
+  "bugs": {
+    "url": "https://github.com/Summer77177/dsh-douyin-agent/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "douyin",
+    "browser-automation",
+    "persona",
+    "local-memory"
+  ],
+  "engines": {
+    "node": ">=22.13",
+    "dsh": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dependencies": {
+    "@playwright/cli": "0.1.22",
+    "@playwright/mcp": "0.0.83"
+  },
+  "files": [
+    "api-agent.mjs",
+    "autonomous-comments.mjs",
+    "autonomous-share.mjs",
+    "autonomous-watch.mjs",
+    "browser-auto-launch.mjs",
+    "browser-host.mjs",
+    "browser-launcher.mjs",
+    "chat-agent.mjs",
+    "chat-browser.mjs",
+    "chat-message.mjs",
+    "chat-service.mjs",
+    "comment-guard.mjs",
+    "comment-reader.mjs",
+    "comment-reply.mjs",
+    "comment-voice.mjs",
+    "contact-authorization.mjs",
+    "dm-policy.mjs",
+    "friend-interactions.mjs",
+    "friend-interactions-guard.mjs",
+    "fullscreen-guard.mjs",
+    "group-reply-trigger.mjs",
+    "client.js",
+    "comment-browser.mjs",
+    "cordis.bundle.yml",
+    "core.mjs",
+    "daily-report.mjs",
+    "dsh-plugin.mjs",
+    "memory.mjs",
+    "mention-watch.mjs",
+    "message-tracker.mjs",
+    "native-model-settings.mjs",
+    "native-persona-context.mjs",
+    "native-settings.mjs",
+    "native-settings-transport.mjs",
+    "native-spark-greeting.mjs",
+    "native-watch-decision.mjs",
+    "notify-human.mjs",
+    "ocr-service.mjs",
+    "outbound-send.mjs",
+    "outbound-service.mjs",
+    "persona-memory.mjs",
+    "playwright-runtime.mjs",
+    "public-comment-agent.mjs",
+    "qq-sync.mjs",
+    "runtime-paths.mjs",
+    "spark-agent.mjs",
+    "spark-service.mjs",
+    "task-limits.mjs",
+    "tool-definitions.mjs",
+    "usage-bill.mjs",
+    "video-forward.mjs",
+    "video-limits.mjs",
+    "watch-mode.mjs",
+    "media/index.mjs",
+    "media/key-store.mjs",
+    "media/local_whisper.py",
+    "media/mimo_bridge.py",
+    "media/setup_local.py",
+    "media/requirements.txt",
+    "media/README.md",
+    "media/PROVENANCE.json",
+    "media/vendor/mimo/driver/mimo_driver.py",
+    "media/vendor/mimo/LICENSE",
+    "media/vendor/voice/lib/providers.js",
+    "media/vendor/voice/lib/provider-http.js",
+    "media/vendor/voice/LICENSE",
+    "media/vendor/minimax/lib/index.js",
+    "media/vendor/minimax/LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "skill/SKILL.md",
+    "docs/",
+    "usage-ledger.mjs",
+    "watch-options.mjs",
+    "diagnostics.mjs",
+    "settings-sections.mjs",
+    "scheduled-watch.mjs",
+    "interaction-status.mjs",
+    "scripts/"
+  ],
+  "exports": {
+    ".": "./dsh-plugin.mjs",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.bundle.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "os": [
+    "win32"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.2 <0.3.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "verify": "node scripts/verify.mjs"
+  }
+}
